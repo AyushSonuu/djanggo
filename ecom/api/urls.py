@@ -4,8 +4,8 @@ from .views import home
 
 urlpatterns = [
     path("", home, name='api.home'),
-    # path("category/", admin.site.urls),
-    # path('api-auth/', include('rest_framework.urls')),
+    path("category/", include("api.category.urls")),
+    path('product/', include('api.product.urls')),
     # path('api/',include('api.urls')),
 ]
 
